@@ -1,3 +1,17 @@
 public enum Categoria {
-    ACAO, ESPORTE, ESTRATEGIA, SIMULACAO, RPG
+    ACAO("ACAO"),
+    ESPORTE("ESPORTE"),
+    ESTRATEGIA("ESTRATEGIA"),
+    SIMULACAO("SIMULACAO"),
+    RPG("RPG");
+
+    private String nome;
+
+    Categoria(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
 }

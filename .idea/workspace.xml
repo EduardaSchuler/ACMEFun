@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca970213-ad3e-49bf-bcd4-b21b0a93298e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACMEFun.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AudioVisual.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BluRay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Categoria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cobravel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dados/dados.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/dados.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dados/resultado.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/resultado.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +53,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tecnova\OneDrive - Tecnova Engenharia\Área de Trabalho\Uni projects\ACMEFun\src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,6 +68,7 @@
       <updated>1683574075131</updated>
       <workItem from="1683574075753" duration="4181000" />
       <workItem from="1683760853207" duration="2369000" />
+      <workItem from="1684723155155" duration="8173000" />
     </task>
     <servers />
   </component>
