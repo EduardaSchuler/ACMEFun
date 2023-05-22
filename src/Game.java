@@ -13,15 +13,15 @@ public class Game extends AudioVisual{
     @Override
     public double calculaPrecoVenda() {
         if(getCategoria().equals(Categoria.ACAO)){
-            return getPrecoBase() * 0.2;
+            return getPrecoBase() + (getPrecoBase() * 0.2);
         } else if (getCategoria().equals(Categoria.ESPORTE)){
-             return getPrecoBase() * 0.3;
+             return getPrecoBase() + (getPrecoBase() * 0.3);
         } else if (getCategoria().equals(Categoria.ESTRATEGIA)){
-            return getPrecoBase() * 0.4;
+            return getPrecoBase() + (getPrecoBase() * 0.4);
         } else if (getCategoria().equals(Categoria.SIMULACAO)){
-            return getPrecoBase() * 0.5;
+            return getPrecoBase() + (getPrecoBase() * 0.5);
         } else if(getCategoria().equals(Categoria.RPG)){
-            return getPrecoBase() * 0.7;
+            return getPrecoBase() + (getPrecoBase() * 0.7);
         } else {
             return 0;
         }
