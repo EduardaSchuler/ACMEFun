@@ -9,7 +9,6 @@ public class App {
     private Scanner in;
     private Acervo acervo;
     private String linha;
-    private ArrayList<String> file;
 
     public App() {
         String cabecalho;
