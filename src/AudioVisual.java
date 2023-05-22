@@ -11,15 +11,8 @@ public abstract class AudioVisual implements Cobravel{
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     public double getPrecoBase() {
         return precoBase;
     }
 
-    public void setPrecoBase(double precoBase) {
-        this.precoBase = precoBase;
-    }
 }

@@ -1,8 +1,6 @@
 import java.io.*;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.OptionalDouble;
 import java.util.Scanner;
 
 public class App {
@@ -31,10 +29,12 @@ public class App {
                     duracao = Integer.parseInt(valores[3]);
                     BluRay bluRay = new BluRay(duracao, precoBase, titulo);
                     acervo.getListaBlueRays().add(bluRay);
-                } else {
+                } else if (tipo == 2){
                     categoria = Categoria.valueOf(valores[3]);
                     Game game = new Game(titulo, precoBase, categoria);
                     acervo.getListaGames().add(game);
+                } else {
+                    System.out.println("Campo 'tipo' invalido!");
                 }
             }
             PrintStream streamSaida = new PrintStream(new File("resultado.csv"), Charset.forName("UTF-8"));
