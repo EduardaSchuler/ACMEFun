@@ -21,23 +21,31 @@ public class App {
             BufferedReader streamEntrada  = new BufferedReader(new FileReader("src\\dados.csv"));
             cabecalho = streamEntrada.readLine();
             while((linha = streamEntrada.readLine()) != null){
-                String[] valores = linha.split(";");
-                titulo = valores[0];
-                precoBase = Double.parseDouble(valores[1]);
-                tipo = Integer.parseInt(valores[2]);
-                if (tipo == 1){
-                    duracao = Integer.parseInt(valores[3]);
-                    BluRay bluRay = new BluRay(duracao, precoBase, titulo);
-                    acervo.getListaBlueRays().add(bluRay);
-                } else if (tipo == 2){
-                    categoria = Categoria.valueOf(valores[3]);
-                    Game game = new Game(titulo, precoBase, categoria);
-                    acervo.getListaGames().add(game);
-                } else {
-                    System.out.println("Campo 'tipo' invalido!");
+                try {
+                    String[] valores = linha.split(";");
+                    titulo = valores[0];
+                    precoBase = Double.parseDouble(valores[1]);
+                    tipo = Integer.parseInt(valores[2]);
+                    if (tipo == 1) {
+                        duracao = Integer.parseInt(valores[3]);
+                        BluRay bluRay = new BluRay(duracao, precoBase, titulo);
+                        acervo.getListaBlueRays().add(bluRay);
+                    } else if (tipo == 2) {
+                        try {
+                            categoria = Categoria.valueOf(valores[3]);
+                            Game game = new Game(titulo, precoBase, categoria);
+                            acervo.getListaGames().add(game);
+                        } catch (IllegalArgumentException e) {
+                            System.out.println("categoria inválida!");
+                        }
+                    } else {
+                        System.out.println("Campo 'tipo' invalido!");
+                    }
+                } catch (ArrayIndexOutOfBoundsException e){
+                    System.out.println("Uma das linhas é inválida!");
                 }
             }
-            PrintStream streamSaida = new PrintStream(new File("resultado.csv"), Charset.forName("UTF-8"));
+            PrintStream streamSaida = new PrintStream(new File("src\\resultado.csv"), Charset.forName("UTF-8"));
             System.setOut(streamSaida);
         } catch (Exception e ){
             e.printStackTrace();
