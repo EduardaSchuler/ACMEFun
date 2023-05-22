@@ -49,6 +49,7 @@ public class App {
         lerAudioVisuais();
         escreveInfoItens();
         qtdGamesRPG();
+        mediaBluRayImposto();
     }
 
     public void lerAudioVisuais(){
@@ -77,12 +78,21 @@ public class App {
         }
         System.out.println("3;"+count);
     }
-    public void mediaImpostoBluRay(){
-        double[] bluRays = new double[10];
-        for (int i = 0; i < acervo.getListaBlueRays().size(); i++) {
-            bluRays = new double[]{acervo.getListaBlueRays().get(i).calculaImposto()};
-        }
-        var media = Arrays.stream(bluRays).average();
 
+    public void mediaBluRayImposto(){
+        ArrayList<BluRay> bluRays = acervo.getListaBlueRays();
+        double somaImpostos = bluRays.stream().mapToDouble(BluRay::calculaImposto).sum();
+        double mediaImpostos = somaImpostos / bluRays.size();
+
+        BluRay bluRayMaisProximo = bluRays.stream()
+                .min((a, b) -> Double.compare(Math.abs(a.calculaImposto() - mediaImpostos),
+                        Math.abs(b.calculaImposto() - mediaImpostos)))
+                .orElse(null);
+
+        if (bluRayMaisProximo != null) {
+            System.out.println("4;" + mediaImpostos + ";" + bluRayMaisProximo.getTitulo());
+        } else {
+            System.out.println("4:Nenhum BluRay");
+        }
     }
 }

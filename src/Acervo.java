@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Acervo {
     private ArrayList<Game> listaGames;
@@ -15,5 +16,13 @@ public class Acervo {
 
     public ArrayList<BluRay> getListaBlueRays() {
         return listaBlueRays;
+    }
+
+    public double[] listaValorImposto(){
+        double[] bluRays = new double[10];
+        for (int i = 0; i < getListaBlueRays().size(); i++) {
+            bluRays = new double[]{ getListaBlueRays().get(i).calculaImposto()};
+        }
+        return bluRays;
     }
 }
